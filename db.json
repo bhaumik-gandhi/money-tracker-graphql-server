@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Entertainment"
+    },
+    {
+      "id": 3,
+      "name": "Invetsment"
+    },
+    {
+      "id": 4,
+      "name": "Bike"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "itemId": 1,
+      "name": "AC"
+    },
+    {
+      "id": 2,
+      "itemId": 1,
+      "name": "Geyser"
+    },
+    {
+      "id": 3,
+      "itemId": 2,
+      "name": "Movie"
+    },
+    {
+      "id": 4,
+      "itemId": 4,
+      "name": "Petrol"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Bhaumik Gandhi"
+    },
+    {
+      "id": 2,
+      "name": "Jon Doe"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "categoryId": 3,
+      "type": "DEBIT",
+      "amount": 500
+    },
+    {
+      "type": "DEBIT",
+      "amount": 500,
+      "categoryId": 4,
+      "userId": 1,
+      "id": 2
+    }
+  ]
+}
