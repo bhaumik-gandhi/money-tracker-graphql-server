@@ -41,9 +41,18 @@ const RootQuery = new GraphQLObjectType({
         },
         categories: {
             type: new GraphQLList(CategoryType),
-            resolve: async () => {
-                const { data } = await axios.get(JSON_SERVER_URL + `categories`);
-                return data;
+            args: ({ itemId: { type: GraphQLInt } }),
+            resolve: async (parentValue, args) => {
+                const { itemId } = args;
+                let categories;
+
+                if (itemId) {
+                    categories = await axios.get(JSON_SERVER_URL + `categories?itemId=${itemId}`);
+                } else {
+                    categories = await axios.get(JSON_SERVER_URL + `categories`);
+                }
+                
+                return categories.data;
             }
         },
         transactions: {
